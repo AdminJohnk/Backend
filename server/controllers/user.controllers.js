@@ -7,11 +7,6 @@ const { RegisterUser_se } = require('../services/user.services');
 const RegisterUser_co = async (req, res) => {
     const { userName, passWord } = req.body;
 
-    // Simple validation
-    if (!userName || !passWord) {
-        return res.status(400).send({ success: false, message: 'Missing username and/or password' });
-    }
-
     const user = { userName, passWord }
 
     try {

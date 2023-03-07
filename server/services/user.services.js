@@ -2,6 +2,7 @@ const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
 const { User } = require('../models/User');
 const userModel = require('../models/User');
+const STATUS_CODE  = require('../util/SettingSystem');
 
 
 const RegisterUser_se = async (user) => {
@@ -11,7 +12,7 @@ const RegisterUser_se = async (user) => {
     const userFind = await User.findOne({ userName });
     if (userFind) {
         return {
-            status: 400,
+            status: STATUS_CODE.CONFLICT, 
             success: false,
             message: 'Username already exists'
         }
@@ -32,7 +33,7 @@ const RegisterUser_se = async (user) => {
     // });
 
     return {
-        status: 201,
+        status: STATUS_CODE.CREATED,
         success: true,
         message: 'User created successfully',
         data: {
