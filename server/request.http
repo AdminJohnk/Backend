@@ -1,0 +1,67 @@
+POST http://localhost:7000/api/users
+Content-Type: application/json
+
+{
+    "userName": "Admintck19",
+    "passWord": "Admintck"
+}
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Admintck11",
+    "password": "Admintck"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "Admintck2",
+    "password": "Admintck"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAzZjM5ZmZhNTU2Y2VhOTJlMTI1Y2QiLCJpYXQiOjE2Nzc5OTExNTR9.gh0OLZs2reyxfoEuI4sWijM7rqzK7683Ux-2zaUiOhw
+
+{
+    "title": "Post 2",
+    "description": "Post 2 description",
+    "url": "http://www.youtube.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAzZjM5ZmZhNTU2Y2VhOTJlMTI1Y2QiLCJpYXQiOjE2Nzc5OTExNTR9.gh0OLZs2reyxfoEuI4sWijM7rqzK7683Ux-2zaUiOhw
+
+
+###
+PUT http://localhost:5000/api/posts/64041f04dc06397551f003a0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAzZjM5ZmZhNTU2Y2VhOTJlMTI1Y2QiLCJpYXQiOjE2Nzc5OTExNTR9.gh0OLZs2reyxfoEuI4sWijM7rqzK7683Ux-2zaUiOhw
+
+{
+    "title": "Vue",
+    "description": "VUEEE",
+    "url": "vujs.org",
+    "status": "LEARNING"
+}
+
+
+###
+DELETE http://localhost:5000/api/posts/64041f04dc06397551f003a0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAzZjM5ZmZhNTU2Y2VhOTJlMTI1Y2QiLCJpYXQiOjE2Nzc5OTExNTR9.gh0OLZs2reyxfoEuI4sWijM7rqzK7683Ux-2zaUiOhw
+
+
+
+
+
+
